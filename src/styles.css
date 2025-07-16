@@ -1,2 +1,19 @@
+
+@font-face {
+  font-family: 'Sherlock';
+  src: url('../public/assets/Sherlock.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 @import "tailwindcss";
-/* You can add global styles to this file, and also import other style files */
+
+
+
+@theme{
+  --font-sherlock: Sherlock, 'sherlock';
+}
+
+
+
+
