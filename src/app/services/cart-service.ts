@@ -1,26 +1,26 @@
 import { Injectable } from '@angular/core';
-import {CartItem, Product} from '../models/models';
+import { ItemCarrito, Producto} from '../models/models';
 
 @Injectable({ providedIn: 'root' })
 export class CartService {
 
-  private items: CartItem[] = [];
+  private items: ItemCarrito[] = [];
 
-  addToCart(product: Product, quantity: number) {
-    const index = this.items.findIndex(i => i.product.id === product.id);
+  addToCart(producto: Producto, cantidad: number) {
+    const index = this.items.findIndex(i => i.producto.id === producto.id);
     if (index > -1) {
-      this.items[index].quantity += quantity;
+      this.items[index].cantidad += cantidad;
     } else {
-      this.items.push({ product, quantity });
+      this.items.push({ producto, cantidad });
     }
   }
 
-  getItems(): CartItem[] {
+  getItems(): ItemCarrito[] {
     return this.items;
   }
 
   getTotal(): number {
-    return this.items.reduce((acc, item) => acc + item.product.price * item.quantity, 0);
+    return this.items.reduce((acc, item) => acc + item.producto.precio * item.cantidad, 0);
   }
 
   clearCart() {

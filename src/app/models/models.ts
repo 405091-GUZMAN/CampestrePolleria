@@ -1,10 +1,12 @@
-export interface Product {
+export interface Producto {
   id: number;
-  name: string;
-  price: number;
-  imageUrl: string;
+  nombre: string;
+  categoria: string; // ej: "Pollo Fresco", "Fiambres", etc.
+  precio: number;
+  imagenUrl: string;
 }
-export interface CartItem {
-  product: Product;
-  quantity: number;
+
+export interface ItemCarrito {
+  producto: Producto;
+  cantidad: number;
 }

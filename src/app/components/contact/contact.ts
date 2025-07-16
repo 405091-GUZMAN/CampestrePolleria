@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import {FormsModule} from '@angular/forms';
+import {Component, ViewChild} from '@angular/core';
+import {FormsModule, NgForm} from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
@@ -11,8 +11,22 @@ import {FormsModule} from '@angular/forms';
 })
 export class Contact {
 
-  onSubmit() {
-    alert('Gracias por tu consulta! Nos comunicaremos pronto.');
-    // Aquí podés agregar lógica para enviar datos a backend o mailer
+  enviado = false;
+
+  onSubmit(event: SubmitEvent) {
+    const form = event.target as HTMLFormElement;
+
+    if (!form.checkValidity()) {
+      event.preventDefault();
+      return;
+    }
+
+    this.enviado = true;
+
+    setTimeout(() => {
+      this.enviado = false;
+    }, 5000);
   }
 }
+
+

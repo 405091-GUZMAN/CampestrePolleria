@@ -1,1 +1,39 @@
-<p>product-catalog works!</p>
+<div class="max-w-6xl mx-auto p-6">
+
+  <h2 class="text-3xl font-sherlock mb-6 text-center">Productos</h2>
+
+  <!-- Filtro categorías -->
+  <div class="flex justify-center space-x-4 mb-6">
+    @for (cat of categorias; track $index) {
+      <button
+        (click)="categoriaSeleccionada = cat"
+        class="px-4 py-2 rounded shadow hover:bg-yellow-400 transition"
+        [class.bg-yellow-500]="categoriaSeleccionada === cat"
+        type="button"
+      >
+        {{ cat }}
+      </button>
+    }
+  </div>
+
+  <!-- Lista de productos -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    @for (producto of productosFiltrados; track $index) {
+      <div class="border rounded shadow p-4 flex flex-col items-center">
+        <img
+          src="{{ producto.imagenUrl }}"
+          alt="{{ producto.nombre }}"
+          class="w-full h-48 object-cover rounded mb-4"
+        />
+        <h3 class="text-xl font-semibold mb-2">{{ producto.nombre }}</h3>
+        <p class="text-lg font-bold text-yellow-600">${{ producto.precio | number }}</p>
+        <button
+          class="mt-auto bg-cyan-800 text-white px-4 py-2 rounded hover:bg-cyan-900"
+        >
+          Agregar al carrito
+        </button>
+      </div>
+    }
+  </div>
+
+</div>
