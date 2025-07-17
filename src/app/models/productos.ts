@@ -1,7 +1,7 @@
 import { Producto } from "./models";
 
 export const productos : Producto[] = [
-  // POLLO 🐔
+  // POLLO
   {
     id: 1,
     nombre: 'Pollo entero',
@@ -98,7 +98,7 @@ export const productos : Producto[] = [
     precio: 1000
   },
 
-  // TERNERA 🐮
+  // TERNERA
   {
     id: 16,
     nombre: 'Milanesas de ternera',
@@ -118,7 +118,7 @@ export const productos : Producto[] = [
     precio: 9900
   },
 
-  // CERDO 🐷
+  // CERDO
   {
     id: 19,
     nombre: 'Bondiola',
@@ -150,7 +150,7 @@ export const productos : Producto[] = [
     precio: 9500
   },
 
-  // MERLUZA 🐟
+  // MERLUZA
   {
     id: 24,
     nombre: 'Milanesas de merluza a las finas hierbas',
@@ -164,7 +164,7 @@ export const productos : Producto[] = [
     precio: 14500
   },
 
-  // CONGELADOS 🧊
+  // CONGELADOS
   {
     id: 26,
     nombre: 'Nuggets crocantes',
@@ -214,7 +214,7 @@ export const productos : Producto[] = [
     precio: 5100
   },
 
-  // VERDULERÍA Y FRUTAS 🍅
+  // VERDULERÍA Y FRUTAS
   {
     id: 34,
     nombre: 'Papa',

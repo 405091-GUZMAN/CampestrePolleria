@@ -1,8 +1,6 @@
-<!-- Navbar fijo arriba -->
 <nav class="bg-cyan-900 text-white px-4 py-4 shadow fixed top-0 left-0 right-0 z-50">
   <div class="flex justify-between items-center flex-wrap">
 
-    <!-- Logo + Links -->
     <div class="flex items-center space-x-4 text-xl font-sherlock">
       <a class="flex-shrink-0">
         <img class="w-20 h-20 sm:w-24 sm:h-24" src="/assets/logos/veleta.png" alt="logo" />
@@ -14,7 +12,6 @@
       </div>
     </div>
 
-    <!-- Botón hamburguesa -->
     <div class="md:hidden">
       <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="focus:outline-none">
         <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
@@ -23,7 +20,6 @@
       </button>
     </div>
 
-    <!-- Iconos desktop -->
     <div class="hidden md:flex items-center space-x-4">
       <a href="https://instagram.com/campestre.lq" target="_blank" class="underline hover:text-yellow-400">
         <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 fill-current" viewBox="0 0 24 24">
@@ -38,7 +34,6 @@
     </div>
   </div>
 
-  <!-- Menú Mobile -->
   <div class="md:hidden hidden mt-4" id="mobile-menu">
     <div class="flex flex-col space-y-2 text-lg font-sherlock">
       <a routerLink="/nosotros" class="px-2">Nosotros</a>
@@ -64,11 +59,9 @@
   <router-outlet></router-outlet>
 </main>
 
-<!-- Footer -->
 <footer class="bg-cyan-900 text-white px-6 py-6 shadow-inner mt-auto" style="min-height: 120px;">
   <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between gap-8 text-sm">
 
-    <!-- Ubicación -->
     <div>
       <h3 class="font-sherlock text-lg font-light mb-2">¿Dónde estamos?</h3>
       <p>Barrio Quebrada de las Rosas, Córdoba, Argentina</p>
@@ -78,7 +71,6 @@
       </p>
     </div>
 
-    <!-- Contacto -->
     <div>
       <h3 class="font-sherlock text-lg font-light mb-2">Contacto</h3>
       <p>Teléfono: <a href="tel:+543517053156" class="underline hover:text-yellow-400">+54 351 705-3156</a></p>
@@ -100,7 +92,6 @@
       </p>
     </div>
 
-    <!-- Horarios -->
     <div>
       <h3 class="font-sherlock text-lg font-light mb-2">Horarios</h3>
       <p>Lunes a Sábados</p>

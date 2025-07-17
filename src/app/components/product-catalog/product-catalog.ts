@@ -53,11 +53,13 @@ export class ProductCatalog {
       return;
     }
 
-    // Armar listado formateado
     const listaItems = this.carrito.map(item => {
       const nombre = item.producto?.nombre || '';
       const cantidad = item.cantidad?.toFixed(2) ?? '0';
       const precio = item.producto?.precio?.toFixed(2) ?? '0';
+     if (item.producto?.nombre === 'Pollo entero'){
+       return `- ${nombre}: ${cantidad} unidad`;
+     }
       return `- ${nombre}: ${cantidad} kg`;
     }).join('\n');
 
