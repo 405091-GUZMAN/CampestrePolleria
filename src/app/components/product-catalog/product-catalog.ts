@@ -58,13 +58,12 @@ export class ProductCatalog {
       const nombre = item.producto?.nombre || '';
       const cantidad = item.cantidad?.toFixed(2) ?? '0';
       const precio = item.producto?.precio?.toFixed(2) ?? '0';
-      const subtotal = (item.cantidad! * item.producto!.precio!).toFixed(2);
-      return `- ${nombre}: ${cantidad} kg x ${precio} $ = ${subtotal} $`;
+      return `- ${nombre}: ${cantidad} kg`;
     }).join('\n');
 
     const total = this.totalCarrito.toFixed(2);
 
-    const mensaje = `¡Hola! Quiero realizar un pedido:\n${listaItems}\n\nTotal estimado: ${total} $`;
+    const mensaje = `¡Hola! Quiero realizar un pedido:\n${listaItems}\n\n`;
 
     const urlWhatsapp = `https://wa.me/5493517053156?text=${encodeURIComponent(mensaje)}`;
 
