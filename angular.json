@@ -23,7 +23,12 @@
               {
                 "glob": "_redirects",
                 "input": "src",
-                "output": "browser"
+                "output": "."
+              },
+              {
+                "glob": "**/*",
+                "input": "src/assets",
+                "output": "assets"
               }
             ],
             "styles": [
